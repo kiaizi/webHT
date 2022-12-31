@@ -643,7 +643,6 @@ $thumb = $arr_data['img_path'];
 					
 				
 ?>
-
 <?php
 	$img = '';
 	$sql = "select img from ".TB_HOME_PROMOTION2_PHOTO02;
