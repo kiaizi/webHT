@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+ul,li{
+  margin:0px;
+  padding:0px;
+  border:0px;
+  outline:0px;
+  background:transparent;
+}
+
+ol,ul,ul,ul li { list-style:none; }
+
+
+
+a:focus {
+	outline: none;
+	
+	
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+.bxslider_container ul {
+	width: 940px;
+	height: 125px;
+	overflow: hidden;
+}
+
+.bxslider_container li {
+	list-style: none;
+	margin: 0;
+	height: 125px;
+}
+
+
+
+
+
+.bxslider_container .multiple li {
+	width: 113px;
+
+}
+
+.bxslider_container .bx-wrapper {
+	margin: 0 auto;
+}
+
+.bxslider_container .bx-prev {
+	position: absolute;
+	top: 0px;
+	left: -15px;
+	width: 15px;
+	height: 125px;
+	text-indent: -999999px;
+	background: url(images/icon_arrow_left.png) no-repeat 0 top;
+}
+
+.bxslider_container .bx-next {
+	position: absolute;
+	top: 0px;
+	right: -15px;
+	width: 15px;
+	height: 125px;
+	text-indent: -999999px;
+	background: url(images/icon_arrow_right.png) no-repeat 0 bottom;
+}
+
+.bxslider_container .bx-next:hover,
+.bxslider_container .bx-prev:hover {
+	background-position: 0 0;
+}
+
+
+

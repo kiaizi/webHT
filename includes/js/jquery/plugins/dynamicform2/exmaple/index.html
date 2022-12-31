@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery Dynamic Form 2</title>
+<link href="jquery-dynamic-form2/main.css" rel="stylesheet" type="text/css" media="all" />
+<link href="jquery-dynamic-form2/dynamic-form.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-dynamic-form2/jquery.dynamicForm.js"></script>
+<!-- syntaxhighlighter -->
+<link type="text/css" rel="stylesheet" href= "scripts/syntaxHighlighter/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href= "scripts/syntaxHighlighter/styles/shThemeDefault.css"/>
+<script type="text/javascript" src="scripts/syntaxHighlighter/scripts/shCore.js"></script>
+
+<script type="text/javascript" src="scripts/syntaxHighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="scripts/syntaxHighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="scripts/syntaxHighlighter/scripts/shBrushPhp.js"></script>
+<!-- js funcs -->
+<script type="text/javascript">
+$(document).ready(function(){
+	SyntaxHighlighter.config.clipboardSwf = 'scripts/syntaxHighlighter/scripts/clipboard.swf';
+	SyntaxHighlighter.all();
+	
+	var options = {
+		numTimes: 1,
+		maxFields: 3,
+		maxFieldsMsg: 'You have reached the maximum number of fields allowed',
+		fadeDuration: 'slow',
+		deleteButtonDiv: 'delete-button-div',
+		deleteButtonClass: 'delete-button',
+		deleteButtonValue: 'Delete This Fieldset'
+	}
+	$('#addButton').dynamicForm(options);
+});
+</script>
+</head>
+<body>
+<div id="demo-header">
+  <p>jQuery Dynamic Form 2</p>
+</div>
+<div id="demo-wrapper">
+
+<p><strong>Instructions:</strong></p>
+<ol>
+	<li>1. Put all the fields that you want to duplicate inside a <code>&lt;fieldset&gt;</code> tag.</li>
+	<li>2. Place the 'add-button' input directly below the fieldset it is responsible for.</li>
+	<li>3. Finally, put "submit" button <u>below</u> all of the <code>&lt;fieldset&gt;</code> tags, i.e. <u>inside</u> the <code>&lt;form&gt;</code> tag.</li>
+
+</ol>
+<p><strong>Example 1 HTML:</strong></p>
+<pre class="brush: html;">
+	<form name="myform" id="myform" method="post" action="#">
+		<h1>Example 1:</h1>
+		<label>Team Name: <input type="text" id="teamname" name="teamname" /></label><br />
+		<!-- START the repeatable fieldset and its inputs -->
+		<fieldset>
+			<label>Player Name: <input type="text" id="playername" name="playername" /> </label><br/>
+
+			<label>Player Password: <input type="password" id="playerpassword" name="playerpassword" /> </label><br/>
+			<label>Yes: <input type="radio" id="radiogroup" name="radiogroup" value="yes"/></label><br/>
+			<label>No: <input type="radio" id="radiogroup" name="radiogroup" value="no"/></label><br/>
+			<label>Item 1: <input type="checkbox" id="item1" name="item1" value="item 1"/></label><br/>
+			<label>Item 2: <input type="checkbox" id="item2" name="item2" value="item 2"/></label><br/>
+			<textarea id="textarea" name="textarea"></textarea>
+
+		</fieldset>	
+		<!-- END the repeatable fieldset and its inputs -->
+		<input type="button" id="addButton1" name="add" value="Add another Player" class="add-button" />
+		<br/>
+		<input type="submit" id="submit" name="submit" value="Submit" class="submit-button" />
+	</form>
+</pre>
+
+<p><strong>Example 1 jQuery:</strong></p>
+<pre class="brush: js;">
+	$(document).ready(function(){
+	    var options = {
+	        numTimes: 1,
+	        maxFields: 3,
+	        maxFieldsMsg: 'You have reached the maximum number of fields allowed',
+			fadeDuration: 'slow',
+	        deleteButtonDiv: 'delete-button-div',
+			deleteButtonClass: 'delete-button',
+			deleteButtonValue: 'Delete This Fieldset'
+	    }
+	    $('#addButton1').dynamicForm(options);
+	});
+
+</pre>
+<p><strong>Example 1 Server Side Output Code:</strong></p>
+<pre class="brush: php;">
+	foreach ($_POST as $key=>$value) {
+		if (is_array($value)) {
+			foreach ($value as $val) {
+				echo "<p>$key = $value</p>\n";
+			}
+		} else {
+			echo "<p>$key = $value</p>\n";
+		}
+	}
+</pre>
+<p>&nbsp;</p>
+<p><strong>Example 1 Demo:</strong></p>
+<form name="myform" id="myform" method="post" action="#">
+	<h1>Example 1:</h1>
+
+	<label>Team Name: <input type="text" id="teamname" name="teamname" /></label><br />
+	<fieldset>
+		<label>Player Name: <input type="text" id="playername" name="playername" /> </label><br/>
+		<label>Player Password: <input type="password" id="playerpassword" name="playerpassword" /> </label><br/>
+		<label>Yes: <input type="radio" id="radiogroup" name="radiogroup" value="yes"/></label><br/>
+		<label>No: <input type="radio" id="radiogroup" name="radiogroup" value="no"/></label><br/>
+
+		<label>Item 1: <input type="checkbox" id="item1" name="item1" value="item 1"/></label><br/>
+		<label>Item 2: <input type="checkbox" id="item2" name="item2" value="item 2"/></label><br/>
+		<textarea id="textarea" name="textarea"></textarea>
+	</fieldset>	
+	<input type="button" id="addButton" name="add" value="Add another Player" class="add-button" />
+	<br/>
+	<input type="submit" id="submit" name="submit" value="Submit" class="submit-button" />
+</form>
+
+	</div>
+</body>
+</html>

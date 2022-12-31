@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+
+
+
+
+
+#frame {
+	
+}
+
+/*
+	Slideshow
+*/
+
+#home_banner3_slides {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+	width:299px;
+	height:290px;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+#home_banner3_slides  .slides_container {
+	width:299px;
+
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+#home_banner3_slides  .slides_container div.item {
+	width:299px;
+	height:290px;
+	display:block;
+	position:relative;
+}
+
+#home_banner3_slides  .slides_container a {
+	width:299px;
+	height:290px;
+	display:block;
+	text-decoration:none;
+	position:relative;
+}
+
+#home_banner3_slides  .slides_container div.item img.slide_img {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#home_banner3_slides  .slides_container div.item .other_info {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:383px;
+	height:40px;
+	background-image:url(images/otherinfo.png);
+	background-repeat:repeat;
+	color:#FFF;
+	font-size:12px;
+	padding-top:20px;
+	padding-left:40px;
+	padding-right:40px;
+	overflow:hidden;
+}
+#home_banner3_slides  .slides_container div.item .other_info .title {
+
+	color:#f89000;
+	font-weight:bold;
+	font-size:14px;
+
+	
+	
+	
+	
+}
+#home_banner3_slides  .slides_container div.item .other_info .subtitle {
+	color:#FFF;
+	font-weight:normal;
+	font-size:12px;
+
+	
+	
+}
+
+/*
+	Next/prev buttons
+*/
+
+#home_banner3_slides .prev {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:29px;
+	height:60px;
+	/*display:block;*/
+	z-index:999999;
+	display:none;
+	
+}
+
+#home_banner3_slides .next {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	width:29px;
+	height:60px;
+	/*display:block;*/
+	z-index:999999;
+	display:none;
+}
+
+
+#home_banner3_slides .next a:link, #home_banner3_slides .next a:visited {
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-next.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+	text-indent: -9999px;
+}
+
+#home_banner3_slides .next a:hover{
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-next.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px bottom;
+	text-indent: -9999px;
+}
+
+
+
+#home_banner3_slides .prev a:link, #home_banner3_slides .prev a:visited {
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-prev.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+	text-indent: -9999px;
+}
+
+#home_banner3_slides .prev a:hover{
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-prev.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px bottom;
+	text-indent: -9999px;
+}
+
+
+
+
+
+
+/*
+	Pagination
+*/
+
+table.paginationTable {
+	position:absolute;
+	
+	width:299px;
+	
+	
+	top:7px;
+	z-index:101;
+	right:7px;
+	margin:auto;
+	padding:auto;
+	
+	
+	
+}
+table.paginationTable  td{
+	padding:0;
+	margin:0;
+	text-align:right;
+	
+	
+	
+}
+
+ul.pagination {
+	
+	
+	
+	clear:both;
+	margin:0;
+	padding:0;
+	
+	
+	
+	
+	
+	
+	
+}
+
+ul.pagination li {
+	margin:0;
+	padding:0;
+	
+	
+	float:left;
+	margin:0 1px;
+	list-style:none;
+	
+}
+
+ul.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(images/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+ul.pagination li.current a {
+	background-position:0 -12px;
+}
+
+
+
+a:focus {
+	outline: none;
+	
+	
+}

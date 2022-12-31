@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2008 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample templates definitions file. It makes the "templates"
+ * command completely customizable.
+ *
+ * See FCKConfig.TemplatesXmlPath in the configuration file.
+-->
+<Templates imagesBasePath="fck_template/images/">
+	<Template title="Table Template 1 " image="1.jpg">
+		<Description>Table Template 1</Description>
+		<Html>
+			<![CDATA[
+	
+<table id="market_hkex_table" width="750" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <th width="90">&nbsp;</th>
+            <th width="90"><span class="text_bottom_line">恒⽣指数</span></th>
+            <th width="90"><span class="text_bottom_line">H股指数</span></th>
+            <th width="90"><span class="text_bottom_line">⼩型恒⽣指数</span></th>
+            <th width="90"><span class="text_bottom_line">⼩型H股指数</span></th>
+        </tr>
+        <tr>
+            <td>编号</td>
+            <td>HSI</td>
+            <td>HSI</td>
+            <td>HSI</td>
+            <td>HSI</td>
+        </tr>
+        <tr>
+            <td>合约乘数</td>
+            <td>50港元*指数</td>
+            <td>50港元*指数</td>
+            <td>50港元*指数</td>
+            <td>50港元*指数</td>
+        </tr>
+        <tr>
+            <td>最⼩变动价位</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>最⼩变动价位值</td>
+            <td>50HKD</td>
+            <td>50HKD</td>
+            <td>50HKD</td>
+            <td>50HKD</td>
+        </tr>
+        <tr>
+            <td>结算币种</td>
+            <td colspan="4">HKD</td>
+        </tr>
+        <tr>
+            <td>交易时间</td>
+            <td colspan="4">09:15-12:00,13:00-16:30, 17:15-03:00*</td>
+        </tr>
+        <tr>
+            <td>交易⽉份</td>
+            <td colspan="4">现⽉、下⽉及之后两个季⽉</td>
+        </tr>
+        <tr>
+            <td>结算⽅式</td>
+            <td colspan="4">现⾦</td>
+        </tr>
+    </tbody>
+</table>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+	
+	
+	
+	
+	
+	<Template title="Table Template 2 " image="2.jpg">
+		<Description>Table Template 2</Description>
+		<Html>
+			<![CDATA[
+	
+
+	<table id="normal_table" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td width="120">交易品种</td>
+            <td>中质含硫原油</td>
+        </tr>
+        <tr>
+            <td>交易单位</td>
+            <td>1000桶/手</td>
+        </tr>
+        <tr>
+            <td>报价单位</td>
+            <td>元（人民币）/桶（交易报价为不含税价格）</td>
+        </tr>
+        <tr>
+            <td>最小变动单位</td>
+            <td>0.1元（人民币）/桶</td>
+        </tr>
+        <tr>
+            <td>涨跌停板幅度</td>
+            <td>不超过上一交易日结算价&plusmn;4%</td>
+        </tr>
+        <tr>
+            <td>合约月份</td>
+            <td>最近1-12个月为连续月份以及随后八个季月</td>
+        </tr>
+        <tr>
+            <td>交易时间</td>
+            <td>上午9:00 - 11:30，下午1:30 - 3:00以及上海国际能源交易中心规定 的其他交易时间</td>
+        </tr>
+        <tr>
+            <td>最后交易日</td>
+            <td>交割月份前第一月的最后一个交易日；上海国际能源交易中心有权根据国家法定节假日调整最后交易日</td>
+        </tr>
+        <tr>
+            <td>最后交割日</td>
+            <td>最后交易日后连续五个交易日</td>
+        </tr>
+        <tr>
+            <td>交割等级</td>
+            <td>中质含硫原油，基准品质为API度32.0，硫含量1.5%，具体可交割油种及升贴水由上海国际 能源交易中心另行规定</td>
+        </tr>
+        <tr>
+            <td>交割地点</td>
+            <td>上海国际能源交易中心指定交割仓库</td>
+        </tr>
+        <tr>
+            <td>最低交易保证金</td>
+            <td>合约价值的5%</td>
+        </tr>
+        <tr>
+            <td>交割方式</td>
+            <td>实物交割</td>
+        </tr>
+    </tbody>
+</table>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+	
+	
+	
+	
+	
+		
+	<Template title="Table Template 3 " image="3.jpg">
+		<Description>Table Template 3</Description>
+		<Html>
+			<![CDATA[
+			
+	
+	<table id="market_hkex_table" width="750" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <th width="90">&nbsp;</th>
+            <th width="90"><span class="text_bottom_line">   上期能源<br />
+            中业含硫原油 </span></th>
+            <th width="90"><span class="text_bottom_line">  洲业交易所<br />
+            布业特原油 </span></th>
+            <th width="90"><span class="text_bottom_line">  芝加哥商品交易所WTI  </span></th>
+            <th width="90"><span class="text_bottom_line">   迪拜商品交易所<br />
+            阿曼原油 </span></th>
+        </tr>
+        <tr>
+            <td>交易品种</td>
+            <td>中业含硫原油，基准品业业  API度  32，含硫量 1.5%，具体可交割油种及升业水由能源中心业行业定</td>
+            <td>北海一业子原油BFOET（布业特、Forties、Oseberg、Ekofisk、Troll）</td>
+            <td>西德克业斯中业基原油 6</td>
+            <td>阿曼原油</td>
+        </tr>
+        <tr>
+            <td>交易业位</td>
+            <td>1000桶/手</td>
+            <td>1000桶/手</td>
+            <td>1000桶/手</td>
+            <td>1000桶/手</td>
+        </tr>
+        <tr>
+            <td>业价业位</td>
+            <td>人民业/桶</td>
+            <td>美元/桶</td>
+            <td>美元/桶及美分/桶</td>
+            <td>美元/桶</td>
+        </tr>
+        <tr>
+            <td>最小业业价位</td>
+            <td>0.1元/桶</td>
+            <td>0.01美元/桶</td>
+            <td>0.01美元/桶</td>
+            <td>0.01美元/桶</td>
+        </tr>
+        <tr>
+            <td>交割方式</td>
+            <td>业物交割</td>
+            <td>业金业算</td>
+            <td>业业交割</td>
+            <td>业业交割</td>
+        </tr>
+        <tr>
+            <td>交割方法/业型</td>
+            <td>能源中心指定交割地点保税交割</td>
+            <td>期业业业业</td>
+            <td>FOB 管道交割</td>
+            <td>FOB 装船港交割</td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	
+	
+	
+	
+		<Template title="Table Template 4 " image="4.jpg">
+		<Description>Table Template 4</Description>
+		<Html>
+			<![CDATA[
+			
+	<table id="market_hkex_table" width="750" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <th width="90">&nbsp;</th>
+            <th width="180">个人客户</th>
+            <th width="180">机构客户</th>
+        </tr>
+        <tr>
+            <td>交易经历及相关证明文件</td>
+            <td colspan="2">
+            <ul>
+                <li>具有累计不少于10个交易日且20笔及以上的境内交易场所的期货合约或者期权合约仿真交易成交记录</li>
+                <li>或者近三年内具有10笔及以上的境内交易场所的期货合约、期权合约或者集中清算的其他衍生品交易成交记录</li>
+                <li>或者近三年内具有10笔及以上的在与中国证券监督管理委员会签署监管合作谅解备忘录的国家（地区）期货监管机构监管的境外交易场所的期货合约、期权合约或者集中清算的其他衍生品交易成交记录</li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>保证金余额</td>
+            <td>申请开立交易编码或者开通交易权限前连续5个交易日保证金账户可用资金余额均不低于人民币50万元或者等值外币</td>
+            <td>申请开立交易编码或者开通交易权限前连续5个交易日保证金账户可用资金余额均不低于人民币100万元或者等值外币</td>
+        </tr>
+        <tr>
+            <td>保证金余额</td>
+            <td>申请交易编码前5个工作日保证金账户可用资金余额均不低于人民币50万元或者等值外币</td>
+            <td>申请交易编码前5个工作日保证金账户可用资金余额均不低于人民币100万元或者等值外币</td>
+        </tr>
+        <tr>
+            <td>其它</td>
+            <td colspan="2">不存在严重不良诚信记录或者被有权监管机关宣布为期货市场禁止进入者的情形，不存在法律、法规、规章和能源中心业务规则禁止或者限制从事期货交易的情形等             具有健全的内部控制、风险管理等期货交易管理相关制度</td>
+        </tr>
+        <tr>
+            <td>测试</td>
+            <td colspan="2">通过相关测试，有历史交易经验</td>
+        </tr>
+    </tbody>
+</table>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+	
+	
+		<Template title="Table Template 5 " image="5.jpg">
+		<Description>Table Template 5</Description>
+		<Html>
+			<![CDATA[
+			
+	<table id="normal_table" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td width="90">交易品种</td>
+            <td>低硫燃料油</td>
+            <td>20号胶</td>
+        </tr>
+        <tr>
+            <td>交易单位</td>
+            <td>10吨/手</td>
+            <td>10吨/手</td>
+        </tr>
+        <tr>
+            <td>报价单位</td>
+            <td>元（人民币）/吨（交易报价为不含税价格）</td>
+            <td>元（人民币）/吨（交易报价为不含税价格）</td>
+        </tr>
+        <tr>
+            <td>最小变动单位</td>
+            <td>1元（人民币）/吨</td>
+            <td>5元（人民币）/吨</td>
+        </tr>
+        <tr>
+            <td>涨跌停板幅度</td>
+            <td>不超过上一交易日结算价&plusmn;5%</td>
+            <td>不超过上一交易日结算价&plusmn;5%</td>
+        </tr>
+        <tr>
+            <td>合约月份</td>
+            <td>1月、2月、3月、4月、5月、6月、7月、8月、9月、10月、11月、12月</td>
+            <td>1月、2月、3月、4月、5月、6月、7月、8月、9月、10月、11月、12月</td>
+        </tr>
+        <tr>
+            <td>交易时间</td>
+            <td>上午9:00 			- 11:30，下午1:30 			- 3:00以及上海国际能源交易中心规定 			的其他交易时间</td>
+            <td>上午9:00-11:30，下午1:30-3:00以及上海国际能源交易中心规定的其他交易时间</td>
+        </tr>
+        <tr>
+            <td>最后交易日</td>
+            <td>交割月份前第一月的最后一个交易日（遇国家法定节假日、休息日顺延；上海国际能源交易中心可以根据国家法定节假日、休息日调整最后交易日）</td>
+            <td>交割月份的15日（遇国家法定节假日、休息日顺延；上海国际能源交易中心可以根据国家法定节假日、休息日调整最后交易日）</td>
+        </tr>
+        <tr>
+            <td>最后交割日</td>
+            <td>最后交易日后连续五个交易日</td>
+            <td>最后交易日后连续五个交易日</td>
+        </tr>
+        <tr>
+            <td>交割等级</td>
+            <td>低硫船用燃料油（具体质量规定见交易所说明）</td>
+            <td>具体质量规定见交易所说明</td>
+        </tr>
+        <tr>
+            <td>交割地点</td>
+            <td>上海国际能源交易中心指定交割仓库</td>
+            <td>上海国际能源交易中心指定交割仓库</td>
+        </tr>
+        <tr>
+            <td>最低交易保证金</td>
+            <td>合约价值的8%</td>
+            <td>合约价值的7%</td>
+        </tr>
+        <tr>
+            <td>交割方式</td>
+            <td>实物交割</td>
+            <td>实物交割</td>
+        </tr>
+    </tbody>
+</table>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+			<Template title="Table Template 6 " image="6.jpg">
+		<Description>Table Template 6</Description>
+		<Html>
+			<![CDATA[
+			
+	<table id="op_ac_step" width="96%" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2">开户所需文件</td>
+        </tr>
+        <tr>
+            <td rowspan="3" width="100" valign="top" align="left">准备文件</td>
+            <td valign="top" align="left">身份证明文件</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">3个月内住址证明文件</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">银行证明文件</td>
+        </tr>
+        <tr>
+            <td rowspan="9" valign="top" align="left">填写表格</td>
+            <td valign="top" align="left">账户开户表格连同客户协议书-条款及条件</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">客户款项常设授权</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">实时市场数据条款</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">非美国人免扣除美国所得税声明书</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">手续费申请单</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">CRS自我证明表格（个人）</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">*委托授权书（如适用）</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">*香港证监会持牌人雇主同意信（如适用）</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">*申请邮寄结单服务（如适用）</td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top" align="left">交易&ldquo;上海国际能源交易中心原油期货&rdquo;需填写至之表格及准备材料</td>
+        </tr>
+        <tr>
+            <td rowspan="3" valign="top" align="left">准备文件</td>
+            <td valign="top" align="left">依交易者类型检附影像数据采集要求 (如下图)</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">原油期货基础知识测试/客户承诺书</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">关于交易者符合相关期货交易所交易者适当性制度要求的证明</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left">填写表格</td>
+            <td valign="top" align="left">境外个人交易者交易编码申请表</td>
+        </tr>
+    </tbody>
+</table>
+<p class="sm-text">注：如填写语言为英文，除提供原件扫描件之外，开户个人必须提供翻译为中文的版本并加盖公章。</p>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+	
+	
+	
+	
+
+	
+			<Template title="Table Template 7 " image="7.jpg">
+		<Description>Table Template 7</Description>
+		<Html>
+			<![CDATA[
+			
+	<table class="raoc-tb">
+    <tbody>
+        <tr>
+            <th rowspan="3" class="raoc-tb-row-01">&nbsp;</th>
+        </tr>
+        <tr>
+            <td colspan="4">账户类型</td>
+        </tr>
+        <tr>
+            <td class="raoc-tb-row-02">个人账户</td>
+            <td class="raoc-tb-row-03">联名账户</td>
+            <td colspan="2" class="raoc-tb-row-04">机构账户</td>
+        </tr>
+        <tr>
+            <th rowspan="10" class="raoc-tb-row-01">本公司提供，客户需下载并填写、签署</th>
+            <td colspan="2">N.A.</td>
+            <td colspan="2">授权成立账户公司决议案</td>
+        </tr>
+        <tr>
+            <td colspan="4">账户开户表格连同客户协议书 &ndash; 条款及条</td>
+        </tr>
+        <tr>
+            <td colspan="4">客户款项常设授权</td>
+        </tr>
+        <tr>
+            <td colspan="4">实时市场数据条款</td>
+        </tr>
+        <tr>
+            <td colspan="4">非美国人免扣除美国所得税声明书</td>
+        </tr>
+        <tr>
+            <td colspan="4">委托授权书（如适用）</td>
+        </tr>
+        <tr>
+            <td colspan="4">香港证监会持牌人雇主同意信（如适用）</td>
+        </tr>
+        <tr>
+            <td colspan="4">申请邮寄结单服务（如适用）[1]</td>
+        </tr>
+        <tr>
+            <td colspan="4">手续费申请单</td>
+        </tr>
+        <tr>
+            <td class="raoc-tb-row-05">CRS自我证明表格-个人</td>
+            <td class="raoc-tb-row-11">CRS自我证明表格-个人（第一及第二客户各填一份）</td>
+            <td colspan="2" class="raoc-tb-row-06">CRS自我证明表格-实体CRS自我证明表格-控权人</td>
+        </tr>
+        <tr>
+            <th rowspan="8" class="raoc-tb-row-01">客户需自行准备</th>
+        </tr>
+        <tr>
+            <td rowspan="4" colspan="2" class="raoc-tb-row-07">N.A.</td>
+            <td colspan="2">公司成立证书[2]</td>
+        </tr>
+        <tr>
+            <td colspan="2">公司组织章程</td>
+        </tr>
+        <tr>
+            <td colspan="2">商业登记证[3]</td>
+        </tr>
+        <tr>
+            <td colspan="2">公司年报表（AR1）[4]</td>
+        </tr>
+        <tr>
+            <td colspan="4">银行证明文件（或后补银行证明文件确认书）</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="raoc-tb-row-07">身份证明文件</td>
+            <td colspan="2" class="raoc-tb-row-08">与公司客户有关联人士、董事、&gt;25%股权之最终拥有人、或授权全权负责账户之个人、或授权发出指示下单交易之个人、或授权发出指示调动资金或结算之个人的身份证明文件</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="raoc-tb-row-09">3个月内的住址证明[5]</td>
+            <td colspan="2" class="raoc-tb-row-10">&gt;25%股权之最终拥有人的3个月内的住址证明[6]</td>
+        </tr>
+    </tbody>
+</table>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+		<Template title="Table Template 8 " image="8.jpg">
+		<Description>Table Template 8</Description>
+		<Html>
+			<![CDATA[
+			
+	<table class="client-deposit">
+    <thead>
+        <tr>
+            <td class="cd-tb-title">银行名称<br />
+            Bank Name</td>
+            <td class="cd-tb-title">账户名称<br />
+            Account Name</td>
+            <td class="cd-tb-title">币种<br />
+            Currency</td>
+            <td class="cd-tb-title">账户号码<br />
+            A/C Number</td>
+            <td class="cd-tb-title">国际银行代码<br />
+            Swift Code</td>
+            <td class="cd-tb-title">银行地址<br />
+            Bank Address</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="cd-tb-content" rowspan="3">中国银行（香港）<br />
+            Bank of China (Hong Kong) Limited</td>
+            <td class="cd-tb-content" rowspan="3">HUATAI (HONG KONG)<br />
+            FUTURES LIMITED-HKFE<br />
+            CLIENTS ACCOUNT</td>
+            <td class="cd-tb-content">人民币CNH</td>
+            <td class="cd-tb-content">012-875-0-057070-5</td>
+            <td class="cd-tb-content" rowspan="3">BKCHHKHH</td>
+            <td class="cd-tb-content" rowspan="3">香港花园道1号中银大厦<br />
+            Bank of China Tower, 1 Garden Road,<br />
+            Hong Kong</td>
+        </tr>
+        <tr>
+            <td class="cd-tb-content">人民币CNH</td>
+            <td class="cd-tb-content">012-875-0-606124-7</td>
+        </tr>
+        <tr>
+            <td class="cd-tb-content">美元USD</td>
+            <td class="cd-tb-content">012-875-9-279041-6</td>
+        </tr>
+    </tbody>
+</table>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+			<Template title="Table Template 9 " image="9.jpg">
+		<Description>Table Template 9</Description>
+		<Html>
+			<![CDATA[
+			
+	<table class="client-deposit">
+    <thead>
+        <tr>
+            <td class="cd-tb-title">银行名称<br />
+            Bank Name</td>
+            <td class="cd-tb-title">账户名称<br />
+            Account Name</td>
+            <td class="cd-tb-title">币种<br />
+            Currency</td>
+            <td class="cd-tb-title">账户号码<br />
+            A/C Number</td>
+            <td class="cd-tb-title">国际银行代码<br />
+            Swift Code</td>
+            <td class="cd-tb-title">银行地址<br />
+            Bank Address</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="cd-tb-content">中国银行（香港）<br />
+            Bank of China (Hong Kong) Limited</td>
+            <td class="cd-tb-content">HUATAI (HONG KONG)<br />
+            FUTURES LIMITED-HKFE<br />
+            -NON-HKFE<br />
+            CLIENTS ACCOUNT</td>
+            <td class="cd-tb-content">人民币CNY</td>
+            <td class="cd-tb-content">012-875-9-279045-8</td>
+            <td class="cd-tb-content">BKCHHKHH</td>
+            <td class="cd-tb-content">香港花园道1号中银大厦<br />
+            Bank of China Tower, 1 Garden Road,<br />
+            Hong Kong</td>
+        </tr>
+    </tbody>
+</table>
+	
+			]]>
+		</Html>
+	</Template>
+	
+	
+	
+	
+		
+	
+</Templates>

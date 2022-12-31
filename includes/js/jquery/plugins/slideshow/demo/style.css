@@ -1,0 +1,17 @@
+#slideshow, #slideshow2 {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	border: 1px solid #000000;
+}
+#slideshow img, #slideshow2 img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 300px;
+	height: 300px;
+}
+#pause1, #pause2 {
+	z-index:100;
+}

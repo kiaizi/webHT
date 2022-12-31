@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+
+.theme-default #nivo_slider {
+    margin:0px auto 0 auto;
+    width:850px; /* Make sure your images are the same size */
+    height:210px; /* Make sure your images are the same size */
+}
+.theme-pascal.slider-wrapper,
+.theme-orman.slider-wrapper {
+    margin-top:0px;
+}

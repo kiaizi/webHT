@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+
+
+
+
+
+#frame {
+	
+}
+
+/*
+	Slideshow
+*/
+
+#adverties_slides {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+	width:728px;
+	height:90px;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+#adverties_slides  .slides_container {
+	width:728px;
+	
+
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+#adverties_slides  .slides_container div.item {
+	width:728px;
+	height:90px;
+	display:block;
+	position:relative;
+}
+
+#adverties_slides  .slides_container a {
+	width:728px;
+	height:90px;
+	display:block;
+	text-decoration:none;
+	position:relative;
+}
+
+#adverties_slides  .slides_container div.item img.slide_img {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#adverties_slides  .slides_container div.item .other_info {
+	
+}
+#adverties_slides  .slides_container div.item .other_info .title {
+
+	color:#f89000;
+	font-weight:bold;
+	font-size:14px;
+
+	
+	
+	
+	
+}
+#adverties_slides  .slides_container div.item .other_info .subtitle {
+	color:#FFF;
+	font-weight:normal;
+	font-size:12px;
+
+	
+	
+}
+
+/*
+	Next/prev buttons
+*/
+
+#adverties_slides .prev {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:29px;
+	height:60px;
+	/*display:block;*/
+	z-index:999999;
+	display:none;
+}
+
+#adverties_slides .next {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	width:29px;
+	height:60px;
+	/*display:block;*/
+	z-index:999999;
+	display:none;
+	
+}
+
+
+#adverties_slides .next a:link, #adverties_slides .next a:visited {
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-next.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+	text-indent: -9999px;
+}
+
+#adverties_slides .next a:hover{
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-next.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px bottom;
+	text-indent: -9999px;
+}
+
+
+
+#adverties_slides .prev a:link, #adverties_slides .prev a:visited {
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-prev.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+	text-indent: -9999px;
+}
+
+#adverties_slides .prev a:hover{
+	float: left;
+	width:29px;
+	height:60px;
+	background-image:url(images/arrow-prev.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px bottom;
+	text-indent: -9999px;
+}
+
+
+
+
+
+
+/*
+	Pagination
+*/
+
+#adverties_slides table.paginationTable {
+	position:absolute;
+	
+	
+	width:120px;
+	
+	
+	top:7px;
+	z-index:101;
+	right:7px;
+	margin:auto;
+	padding:auto;
+	display:none;
+	
+	
+	
+}
+#adverties_slides table.paginationTable  td{
+	padding:0;
+	margin:0;
+	text-align:right;
+	
+	
+	
+}
+
+#adverties_slides ul.pagination {
+	
+	
+	
+	clear:both;
+	margin:0;
+	padding:0;
+	
+	
+	
+	
+	
+	
+	
+}
+
+#adverties_slides ul.pagination li {
+	margin:0;
+	padding:0;
+	
+	
+	float:left;
+	margin:0 1px;
+	list-style:none;
+	
+}
+
+#adverties_slides ul.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(images/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+#adverties_slides ul.pagination li.current a {
+	background-position:0 -12px;
+}
+
+
+
+#adverties_slides a:focus {
+	outline: none;
+	
+	
+}

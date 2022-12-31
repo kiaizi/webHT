@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>jQuery Slideshow</title>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="../scripts/jquery.js"></script>
+	<script type="text/javascript" src="../scripts/jquery.slideshow.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#slideshow').slideshow({
+				timeout: 2000,
+				type: 'random',
+				pauselink: 'pause1',
+				pausecallback: function(self){
+					self.html('Play')
+				},
+				playcallback: function(self){
+					self.html('Pause');
+				}
+			});
+			$('#slideshow2').slideshow({
+				timeout: 2000,
+				fadetime: 2000,
+				type: 'sequence',
+				pauselink: 'pause2'
+			});
+	        });
+	</script>
+</head>
+<body>
+	<h1>1</h1>
+	<div id="slideshow">
+		<img src="http://ecx.images-amazon.com/images/I/413bae7x8EL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/31T1YE51EGL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/61mSCkZvneL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/51NTM8V23PL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/4122GSG3EYL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/5117R9BYGCL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/51YK7127Z8L.jpg" alt="" />
+	</div>
+	<a href="#" id="pause1">Pause</a>
+	<h1>2</h1>
+	<div id="slideshow2">
+		<img src="http://ecx.images-amazon.com/images/I/413bae7x8EL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/31T1YE51EGL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/61mSCkZvneL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/51NTM8V23PL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/4122GSG3EYL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/5117R9BYGCL.jpg" alt="" />
+		<img src="http://ecx.images-amazon.com/images/I/51YK7127Z8L.jpg" alt="" />
+	</div>
+	<a href="#" id="pause2">Pause</a>
+</body>
+</html>

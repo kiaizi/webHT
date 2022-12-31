@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Simple jQuery Slideshow Readme</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Simple jQuery Slideshow 1.3 Readme</h1>
+	<h2>Introduction</h2>
+	<p>The jQuery Slideshow Plugin is a very simple slideshow addon for jQuery with no frills and with the simple job of flicking between any number of images after a set delay. The delay can be set to whatever is required and when it is reached the image will fade into the next one.</p>
+	<p>All that you need to set up the slideshow is a set of img elements inside a div element and then a simple JavaScript function call when the page loads. This will setup the slideshow and start it off.</p>
+	<p>Read on for a demo.</p>
+	
+	<p><a href="http://www.matto1990.com/jquery/slideshow/">Visit the project website</a></p>
+
+	<h2>Demo</h2>
+	<p>To be honest the demo is a bit boring. All that happens is that the image on top fades out and makes way for the next. Then it repeats. That's it. End of.</p>
+	<p>To see it visit the <a href="demo">demo page</a>.</p>
+
+	<h2>So... Where's The Script?</h2>
+	<p>You can find the code in the <em>scripts</em> folder in this zip file. Just follow the steps bellow to get it working on your site. Sorry this documentation is such a mess bit I was in a rush to get this done.</p>
+
+	<h2>Usage</h2>
+	<p>Using the code to create a slideshow is very simple. Just look at the example bellow and you should get the idea. Make sure that as well as including the scripts and HTML code you also include the CSS rules as these are used to make the slideshow look ok when Javascript isn't avaliable.</p>
+	
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;jQuery Slideshow&lt;/title&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=iso-8859-1&quot;/&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;scripts/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;scripts/jquery.slideshow.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function() {
+		$('#slideshow').slideshow({
+			timeout: 2000,
+			type: 'random'
+		});
+	});
+&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+	#slideshow {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
+		border: 1px solid #000000;
+	}
+	#slideshow img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 200px;
+		height: 200px;
+	}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;slideshow&quot;&gt;
+	&lt;img src=&quot;images1.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;img src=&quot;images2.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;img src=&quot;images3.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;img src=&quot;images4.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;img src=&quot;images5.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+	<p>Thats a very simple example but will work fully. The function you call has the following settings:</p>
+	
+<pre>$('ID of slideshow').slideshow({
+	timeout: <strong>Time between slides in milliseconds (Default: 2000)</strong>,
+	fadetime: <strong>The time it takes for the fade to happen in milliseconds (Default: 600)</strong>,
+	type: <strong>Type of slideshow: 'sequence' or 'random' (Default: 'sequence')</strong>,
+	plauselink: <strong>The ID of the link to pause the slideshow</strong>,
+	plausecallback: <strong>Function to be run when the slideshow is paused</strong>,
+	playcallback: <strong>Function to run when the slideshow is un-paused</strong>
+});	
+	</pre>
+	
+	<p>That's it. That's all you need to do. No there isnt any step 2 just go forth and create!</p>
+	<p>Enjoy the script and if you use it <a href="http://www.matto1990.com/contact/">send me a message</a>.</p>
+</body>
+</html>
