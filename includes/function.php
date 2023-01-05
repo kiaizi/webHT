@@ -6203,7 +6203,9 @@ if($role_id == '1'){
 	
 	
 	
-}else{
+}
+else{
+//    admin的时候role_id为2
 	
 	$sql = " select access_right.section_id,section.parent_section_id from ".TB_ACCESS_RIGHT." as access_right ,  ".TB_SECTION." as section  ";
 	$sql.= " where access_right.section_id=section.id ";
@@ -6755,9 +6757,7 @@ function getRequestVarArray($string) {
 
 
 
-function getRequestVar($Var,$default =''){   
-		
-	
+function getRequestVar($Var,$default =''){
 		if(   isset($_REQUEST[$Var])  && $_REQUEST[$Var] != ''  ){
 			return formatStringForSQL(getRequestVarArray($_REQUEST[$Var]));
 		}else{

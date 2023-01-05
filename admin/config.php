@@ -131,8 +131,7 @@
 	////////////////////////////////////////////////////////
 	
 	
-	
-	
+//	echo("<script>console.warn('".ADMIN_RIGHT_LEVEL."')</script>");
 	define('ALLOW_SECTION_ID_LIST', getAllowSectionIDList(ADMIN_RIGHT_LEVEL));
 	
 	

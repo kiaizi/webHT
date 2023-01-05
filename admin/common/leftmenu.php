@@ -10,6 +10,7 @@
 	$sql .= " and section.show_in_left_menu = '1' ";
 	$sql .= " and section.parent_section_id = '".P_SID."' ";
 	$sql .= " and section.disabled = '0' ";
+    // 此模块会影响侧边栏和详情页的展示
 	$sql .= " and section.id in (".ALLOW_SECTION_ID_LIST.") ";
 	
 	$sql .= " group by section.id  ";

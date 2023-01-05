@@ -1,4 +1,5 @@
-<?php 
+<?php
+//<!-- 后台管理-业务覆盖-中国市场-ajax请求调整 editFiles-Henry-202301  -->
 if(count($_POST) > 0  ){
 	$this_dir_path = "../../../";
 
@@ -154,8 +155,8 @@ if( $_SESSION['already_login']){
 	$sql .= " trading_market.id = trading_market_desc.trading_market_id ";
 	$sql .= " and trading_market.disabled <> '".DISABLED_DELETE."' ";
 	$sql .= " and trading_market_desc.language_id = '".ADMIN_LANG_ID."'";
-	
-	$sql .= " and trading_market.trading_market_category_id = 1 ";
+//	ibBusi-需要合併到第一個中
+	$sql .= " and trading_market.trading_market_category_id in('1','4') ";
 	
 	$sql .= $search_condition;
 	//$sql .= " group by trading_market.id  ";

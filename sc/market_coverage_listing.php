@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+<!-- 业务覆盖-列表页面-中文 editFiles-Henry-202301  -->
 <?php include('global/html_head.php'); ?>
 
 <body id="contact-us">
@@ -28,6 +29,85 @@ if ($G_DB_CONNECT->affected_rows > 0) {
 
 
 <img src="<?php echo $banner; ?>" width="100%" class="bottom_red_line">
+
+<!-- 轉介紹業務-start -->
+<!--ibBusi-part-->
+<!--这部分需要设计，设计好了之后再进行展示-->
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5 mb-5">
+            <div class="market_api_box">
+                <div class="box_head" id="ibBusi">
+                    <div class="box_head_title_1">IB转介绍业务</div>
+
+                </div>
+                <?php
+
+                //                $sql = "select trading_market.*, trading_market_desc.name as name, trading_market_desc.detail, trading_market_desc.name3 from " . TB_TRADING_MARKET . " as trading_market , " . TB_TRADING_MARKET_DESC . " as trading_market_desc ";
+                $sql = "select trading_market.*, trading_market_desc.*, trading_market_desc.detail, trading_market_desc.name3 from " . TB_TRADING_MARKET . " as trading_market , " . TB_TRADING_MARKET_DESC . " as trading_market_desc ";
+                $sql .= " where ";
+                $sql .= " trading_market.id=trading_market_desc.trading_market_id ";
+                $sql .= " and trading_market_desc.language_id='" . CURRENT_LANG . "' ";
+                $sql .= " and trading_market.disabled='0' ";
+                $sql .= " and trading_market.remark='ibBusi' ";
+                $sql .= " and trading_market_category_id=4 ";
+                $sql .= "  order by  trading_market.sort_order asc ";
+
+
+                $rows2 = $G_DB_CONNECT->query($sql);
+
+                $total_record = $G_DB_CONNECT->affected_rows;
+
+                if ($G_DB_CONNECT->affected_rows > 0) {
+                    ?>
+                    <?php
+                    $k = 0;
+                    while ($data = $G_DB_CONNECT->fetch_array($rows2)) {
+                        $k++;
+                        $trading_support_id = $data['id'];
+                        $trading_support_name = nl2br($data['name']);
+                        $trading_support_detail = displayHTML($data['detail']);
+                        //这里增加简介的内容，采用的是other2_detail的字段，对应到后台部分-开户文件内容 (簡)
+//                        $trading_support_detail = displayHTML($data['detail']);
+                        $trading_simple_detail = displayHTML($data['other_detail3']);
+                        $link = 'market_coverage_detail.php?id=' . $trading_support_id;
+
+
+                        ?>
+                        <div class="box_content">
+<!--                            <h2>--><?php //print_r($data); ?><!--</h2>-->
+                        </div>
+
+                        <div class="box_content">
+                            <b><?php echo $trading_support_name; ?></b>
+                            <div class="box_st_line"></div>
+<!--                            --><?php //echo $trading_support_detail; ?>
+                            <?php echo $trading_simple_detail; ?>
+                        </div>
+
+                        <div class="col-12 text-center p-3">
+                            <a href="<?php echo $link; ?>">
+                                <div class="know_more_btn_2">了解更多&nbsp;&nbsp;<img
+                                            src="../images/index/kw_more_arr.svg" height="25" class="img_mb_5"></div>
+                            </a>
+                        </div>
+
+
+                        <?php
+                    }
+                }
+
+
+                ?>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- 轉介紹業務-end -->
 <!-- 量化交易部分-start -->
 <div class="container">
     <div class="row">
@@ -63,7 +143,6 @@ if ($G_DB_CONNECT->affected_rows > 0) {
 
 
                         ?>
-
                         <div class="box_content">
                             <b><?php echo $trading_support_name; ?></b>
                             <div class="box_st_line"></div>
@@ -84,7 +163,7 @@ if ($G_DB_CONNECT->affected_rows > 0) {
 
 
                 ?>
-                <!-- 量化交易部分-end -->
+
 
 
             </div>
@@ -92,6 +171,7 @@ if ($G_DB_CONNECT->affected_rows > 0) {
     </div>
 
 </div>
+<!-- 量化交易部分-end -->
 
 <div class="grey_bg">
     <div class="container" style="max-width: 90%;">
@@ -109,7 +189,7 @@ if ($G_DB_CONNECT->affected_rows > 0) {
                 </button>
             </div>
         </div>
-
+        <!--全部-->
         <div id="market_all" class="tabcontent">
             <div class="row">
 
@@ -121,6 +201,8 @@ if ($G_DB_CONNECT->affected_rows > 0) {
                 $sql .= " where ";
                 $sql .= " trading_market.id=trading_market_desc.trading_market_id ";
                 $sql .= " and trading_market_desc.language_id='" . CURRENT_LANG . "' ";
+                // ibBusi-part
+                $sql .= " and trading_market.remark!='ibBusi' ";
                 $sql .= " and trading_market.disabled='0' ";
                 //$sql .= " and trading_market_category_id=1 ";
 
@@ -186,7 +268,7 @@ if ($G_DB_CONNECT->affected_rows > 0) {
 
             </div>
         </div>
-        <!--市場部分-end  -->
+        <!--中国市场-->
         <div id="market_china" class="tabcontent">
             <div class="row">
 
@@ -199,6 +281,8 @@ if ($G_DB_CONNECT->affected_rows > 0) {
                 $sql .= " trading_market.id=trading_market_desc.trading_market_id ";
                 $sql .= " and trading_market_desc.language_id='" . CURRENT_LANG . "' ";
                 $sql .= " and trading_market.disabled='0' ";
+                // ibBusi-part
+                $sql .= " and trading_market.remark!='ibBusi' ";
                 $sql .= " and trading_market_category_id=1 ";
 
 
@@ -261,7 +345,7 @@ if ($G_DB_CONNECT->affected_rows > 0) {
                 ?>
             </div>
         </div>
-
+        <!--香港及海外市场-->
         <div id="market_hknothers" class="tabcontent">
             <div class="row">
 
@@ -338,9 +422,10 @@ if ($G_DB_CONNECT->affected_rows > 0) {
 
             </div>
         </div>
-
+        <!--市場部分-end  -->
     </div>
 </div>
+
 
 
 <?php include('global/footer.php'); ?>
